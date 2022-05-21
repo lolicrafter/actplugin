@@ -1,0 +1,706 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="09e5da22-81e1-47ae-8577-f3493a931158" Name="Local triggers" Enabled="false">
+    <Folders>
+      <Folder FFXIVJobFilter="32640" Id="210f0db0-2159-4d5a-ba02-f32e62359c29" Name="生产自动印钞" Enabled="true">
+        <Folders>
+          <Folder Id="0bb56341-57ce-4876-8c6a-539cd9e24414" Name="自动持续制作" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="false" Name="说明: 生产宏绑定F键，多个宏可用卫月宏套娃" Id="a490f2ba-000b-4783-a6b2-f0729b98c468" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="说明: 生产宏要以/e Craft finished结束" Id="c50b048e-11e4-4cd0-a054-120942cee702" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="自动制作" Id="80aea1bb-e3ac-4c40-8021-1537196de451" RegularExpression="萝莉克拉夫特开始制作">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="crafting" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="开始制作" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="70" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="1000" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="自动开始" Id="8efa98ec-851a-461a-a17a-c5247038f611" RegularExpression="Craft finished" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="crafting" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="开始制作" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="2500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="说明: 请确认聊天栏开始制作的日志没有关掉" Id="a9909cb8-64d1-4dce-a100-248371f70cac" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="开始制作" Id="df9171bd-f0f0-4288-bcf7-eb1c2793bcb2" RegularExpression="Craft finished">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Craft finished" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="532273b2-8d20-46fd-8487-19ad334a2259" Name="自动交接巨匠" Enabled="false">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="巨匠停止" Id="b5e970ab-d4b3-4333-8f97-5c776072ede6" RegularExpression="^.{14} 00:0039:交货道具不够。">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="jujiang" VariableExpression="-100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="stop" UseTTSVolumeExpression="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="自动交巨匠" Id="ac430a38-e114-4c36-8e32-ae6da6663b26" RegularExpression="^.{14} 00:0039:接受了任地“水晶都”的任务“批发委托：用于保证精密质量的药水”。">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="jujiang" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="交巨匠" UseTTSRateExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="118" KeyPressCode="187" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressExpression="118" KeyPressCode="187" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="800">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="800">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="17" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="800">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="18" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="19" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="20" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="21" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="22" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="23" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="800">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="24" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="25" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="800">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="26" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="800">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="27" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="28" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="29" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="30" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="31" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="32" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="800">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="33" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="34" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="800">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="35" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="36" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="自动接巨匠 cont" Id="603c9c7f-3a14-4931-bb3f-d86f5fd29db1" RegularExpression="^.{14} 00:003e:获得了[\d,]+金币。">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="接巨匠" UseTTSRateExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="1500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="117" KeyPressCode="189" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="117" KeyPressCode="189" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:jujiang}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="自动接巨匠" Id="cd328d64-fab9-494b-8bf3-d59736e313af" RegularExpression="^.{14} 00:0038:开始接巨匠">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="接巨匠" UseTTSRateExpression="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="117" KeyPressCode="189" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="117" KeyPressCode="189" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="300">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="104" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="KeyPress" ExecutionDelayExpression="500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="说明: /target &lt;triangle&gt;宏绑定-按键" Id="a0c9281d-f214-4b10-852d-e86be9081f11" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="说明: /target &lt;circle&gt;宏绑定=按键" Id="843b866b-9ea9-40ac-bce9-68f9198de2bf" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="说明: 给埃利库鲁标记三角" Id="d4e5fd42-2f8e-4aa1-b902-536608ab22f9" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="说明: 执行过程不要移动鼠标" Id="e1cdd2f0-bd46-4962-82de-66aec87be5a1" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="说明: 把巨匠放在物品栏第一格" Id="ced380f1-f835-4dc2-a675-070e5b27aa33" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="巨匠计数" Id="78544820-7fe0-456c-8ee7-d896a117aeba" RegularExpression="^.{14} 00:0039:因缴纳了优质道具， 得到了额外100％的报酬奖励。">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="jujiang" VariableExpression="${var:jujiang}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="${var:jujiang}" UseTTSVolumeExpression="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="说明: 给莫伊丝标记圆圈" Id="751ab391-2f90-4ae5-9dcf-36db970fccef" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="说明: 提前手动接取巨匠另外的两个理符" Id="36d81610-a0f7-4033-a2cb-c90846e8d01e" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers>
+          <Trigger Enabled="false" Name="说明: 请维持网络延迟稳定并取消后台限制帧数" Id="37c1e777-6f41-4dc2-8bad-aef9e8002582" RegularExpression="">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="98304" Id="53e1f5b7-cd40-46f1-9a70-2ea71a2bd163" Name="采集" Enabled="false">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="false" Name="萝莉克拉夫特结束了" Id="6a287b74-2a93-4dd3-b708-3dddc7617b99" RegularExpression="萝莉克拉夫特结束了">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="结束了" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="萝莉克拉夫特开始了" Id="51a37fe7-71e5-46ec-aa41-22c9bdc66abc" RegularExpression="萝莉克拉夫特开始了">
+            <Actions>
+              <Action OrderNumber="1" PlaySoundFileExpression="开始了" UseTTSTextExpression="开始了" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="2000" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="2000" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="2000" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="2000" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="2000" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="2000" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressExpression="NUM0" KeyPressCode="96" KeyPressWindow="最终幻想XIV" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="KeyPress" ExecutionDelayExpression="2000" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:crafting}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="f7ab919a-37fe-438b-8683-c9f34a08c9ff" Name="采集收藏品" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="洞察”状态效果消失了。" Id="4f9fc042-c8e7-4267-b730-d9073532d0b4" RegularExpression="洞察”状态效果消失了。">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="flag" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="计数+1" Id="5a2316db-ead0-4aa3-b281-b979abe40af9" RegularExpression="结束">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="sumValue" VariableExpression="${var:sumValue} = ${var:sumValue}+${var:collectValue}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" UseTTSTextExpression="更新 ${var:sumValue}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="开始" Id="3b07f9a3-d798-45aa-9b44-9e990063ac1c" RegularExpression="萝莉克拉夫特(开始|结束)了.*">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="sumValue" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="step" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="flag" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" UseTTSTextExpression="初始化计数" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="测试发动技能" Id="378874b3-8c99-43d1-ae08-c8d9e1ae1306" RegularExpression="测试发动技能">
+            <Actions>
+              <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/ac 随机坐骑" UseTTSTextExpression="价值提升" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" UseTTSTextExpression="测试发动技能" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="普通设置变量" Id="44f9f506-46b5-41ff-91df-be382be06153" RegularExpression="收藏价值上升(?&lt;collectValue&gt;\d*)点">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="sumValue" VariableExpression="${var:sumValue}+${collectValue}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="step" VariableExpression="${var:step}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" UseTTSTextExpression="集中 提纯" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="600" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:flag}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="String" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/ac 集中检查" UseTTSTextExpression="集中 提纯" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="NamedCallback" ExecutionDelayExpression="500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/ac 提纯" UseTTSTextExpression="集中 提纯" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="NamedCallback" ExecutionDelayExpression="2500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:flag}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="600" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/ac 慎重提纯" UseTTSTextExpression="集中 提纯" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="NamedCallback" ExecutionDelayExpression="2500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:flag}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="600" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" UseTTSTextExpression="提纯" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="850" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:flag}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" NamedCallbackName="command" NamedCallbackParam="/ac 提纯" UseTTSTextExpression="提纯" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="NamedCallback" ExecutionDelayExpression="500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:flag}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="800" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="850" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="9" UseTTSTextExpression="慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionGroup Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:flag}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="800" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="850" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                    </ConditionGroup>
+                    <ConditionGroup Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="850" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="800" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                    </ConditionGroup>
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="10" NamedCallbackName="command" NamedCallbackParam="/ac 慎重提纯" UseTTSTextExpression="慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="NamedCallback" ExecutionDelayExpression="500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionGroup Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:flag}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="800" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="850" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                    </ConditionGroup>
+                    <ConditionGroup Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="850" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="800" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                    </ConditionGroup>
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="11" NamedCallbackName="command" NamedCallbackParam="/ac 慎重提纯" UseTTSTextExpression="慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="NamedCallback" ExecutionDelayExpression="500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="850" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" NamedCallbackName="command" NamedCallbackParam="/ac 集中检查" UseTTSTextExpression="集中 慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="NamedCallback" ExecutionDelayExpression="500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="600" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="13" NamedCallbackName="command" NamedCallbackParam="/ac 慎重提纯" UseTTSTextExpression="集中 慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="NamedCallback" ExecutionDelayExpression="2500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="600" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="触发了洞察效果" Id="c00d4bcf-2116-499a-b88c-c90d5d58716d" RegularExpression="触发了洞察效果">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="sumValue" VariableExpression="${var:sumValue}+${collectValue}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="step" VariableExpression="${var:step}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" UseTTSTextExpression="洞察 集中 慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="1500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="false" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="600" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/ac 集中检查" UseTTSTextExpression="洞察 集中 慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="NamedCallback" ExecutionDelayExpression="1500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="false" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="600" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/ac 慎重提纯" UseTTSTextExpression="洞察 集中 慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="NamedCallback" ExecutionDelayExpression="3500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="false" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="600" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" UseTTSTextExpression="洞察 慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="1500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="false" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="850" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" NamedCallbackName="command" NamedCallbackParam="/ac 慎重提纯" UseTTSTextExpression="洞察 慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="NamedCallback" ExecutionDelayExpression="1500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="false" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="850" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" UseTTSTextExpression="850集中 提纯" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="UseTTS" ExecutionDelayExpression="500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="850" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="9" UseTTSTextExpression="600集中慎重" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="UseTTS" ExecutionDelayExpression="500">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:sumValue}" ExpressionTypeL="Numeric" ExpressionR="600" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:step}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="触发了洞察效果" Id="9cc87f12-ab87-43ff-b3db-67536f4d70e2" RegularExpression="触发了洞察效果">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="flag" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="结束" Id="ed19b499-0859-4e93-a882-84fba0ac0b7a" RegularExpression="结束">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="${var:flag}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="false" Name="萝莉克拉夫特的职业转换成" Id="295264b8-c41d-4d48-9baf-2a5e9043c098" RegularExpression="萝莉克拉夫特的职业转换成">
+        <Actions>
+          <Action OrderNumber="1" UseTTSTextExpression="萝莉克拉夫特的职业转换成" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
